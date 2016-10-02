@@ -13,7 +13,7 @@ var specs = [
     // },
     {
         role: "worker",
-        count: 4,
+        count: 8,
         version: 1,
         parts: [WORK,MOVE,CARRY],
         // parts: [WORK,WORK,WORK,MOVE,MOVE,MOVE,CARRY,CARRY],

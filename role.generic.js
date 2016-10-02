@@ -42,6 +42,7 @@ var GenericRole = {
             if (this.creep.withdraw(storage, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                 this.creep.moveTo(storage);
             }
+            return true;
         } else {
             if (constants.canHarvestForRecharging) {
                 return this.harvest();
