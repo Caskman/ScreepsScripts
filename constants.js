@@ -6,6 +6,6 @@ module.exports = {
     idleLocation: [18,15],
     canHarvestForRecharging: true,
     energyStorage: [
-        // "2ae0654ea9baf021de29d30e",
+        "57f0a6d9c24a868f18ce477c",
     ],
 };

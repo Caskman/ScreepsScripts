@@ -1,11 +1,11 @@
 
 module.exports = {
-    // "main-source": {
-    //     role: "miner",
-    //     sourceId: "49762d55876aeb78f486c1a5",
-    //     depotId: "dacdbbc714b97bab58d59a49",
-    //     spots: 1,
-    // },
+    "main-source": {
+        role: "miner",
+        sourceId: "57ef9e4986f108ae6e60f16a",
+        depotId: "57f0a6d9c24a868f18ce477c",
+        spots: 2,
+    },
     // "north-source": {
     //     role: "miner",
     //     sourceId: "cc2240fefcc56f83d0e72fbe",

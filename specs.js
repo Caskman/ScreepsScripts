@@ -1,10 +1,11 @@
 var specs = [
-    // {
-    //     role: "miner",
-    //     count: 4,
-    //     parts: [WORK,WORK,WORK,WORK,MOVE,CARRY],
-    //     version: 1,
-    // },
+    {
+        role: "miner",
+        count: 2,
+        parts: [WORK,WORK,MOVE,CARRY],
+        // parts: [WORK,WORK,WORK,WORK,MOVE,CARRY],
+        version: 1,
+    },
     // {
     //     role: "hauler",
     //     count: 3,
