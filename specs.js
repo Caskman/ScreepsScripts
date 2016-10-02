@@ -9,7 +9,8 @@ var specs = [
     // {
     //     role: "hauler",
     //     count: 3,
-    //     parts: [MOVE,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY],
+    //     parts: [CARRY,CARRY,CARRY,MOVE],
+    //     // parts: [MOVE,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY],
     //     version: 1,
     // },
     {
@@ -24,7 +25,7 @@ var specs = [
         role: "upgrader",
         count: 1,
         version: 1,
-        parts: [WORK,MOVE,CARRY],
+        parts: [WORK,WORK,MOVE,CARRY],
         // parts: [WORK,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,CARRY,CARRY],
     },
     {

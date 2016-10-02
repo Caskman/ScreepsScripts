@@ -1,5 +1,6 @@
 var utils = require('utils');
 var GenericRole = require('role.generic');
+var constants = require('constants');
 
 var WorkerRole = {
 
@@ -23,7 +24,7 @@ var WorkerRole = {
             if (this.buildSomething()) {
                 this.sayIntermittently('build');
                 return;
-            } else if (this.upgradeSomething()) {
+            } else if (this.upgradeSomething() && constants.canWorkersUpgrade) {
                 this.sayIntermittently('upgrade');
                 return;
             } else {

@@ -36,4 +36,16 @@ module.exports = {
     //     destId: "2ae0654ea9baf021de29d30e",
     //     spots: 1,
     // },
+    // "main-upgrade": {
+    //     role: "upgrader",
+    //     depotId: "75e69238bd6e239871b034db",
+    //     controllerId: "7d749b101da290e1c3221056",
+    //     spots: 3,
+    // },
+    // "ctrl-upgrade-haul": {
+    //     role: "hauler",
+    //     originId: "ae330e525e9ab6e0b198231f",
+    //     destId: "75e69238bd6e239871b034db",
+    //     spots: 1,
+    // },
 };

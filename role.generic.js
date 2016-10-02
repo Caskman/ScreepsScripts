@@ -153,7 +153,9 @@ var GenericRole = {
     },
     idle: function() {
         var idleLoc = constants.idleLocation;
-        this.creep.moveTo(idleLoc[0],idleLoc[1]);
+        var x = idleLoc[0];
+        var y = idleLoc[1];
+        this.creep.moveTo(x, y);
     },
     sayIntermittently: function(msg) {
         if (Game.time % 10 == 0) this.creep.say(msg);

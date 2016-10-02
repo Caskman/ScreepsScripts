@@ -18,7 +18,7 @@ module.exports.loop = function () {
     
     // make sure haulers and miners are assigned
     if (Game.time % 11 == 0) {
-        var jobCreeps = _.filter(Game.creeps, c => c.memory.role == 'hauler' || c.memory.role == 'miner');
+        var jobCreeps = _.filter(Game.creeps, c => _.includes(['hauler', 'miner', 'upgrader'], c.memory.role));
         var jobs = utils.jobs;
         _.each(jobs, (j, id) => {
             j.id = id;
