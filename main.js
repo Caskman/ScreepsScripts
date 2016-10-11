@@ -96,7 +96,30 @@ module.exports.loop = function () {
         }
     }
     
-    if (Game.time % 97 == 0) {
+    // tower ai
+    var towers = _.filter(Game.structures, s => s.structureType == STRUCTURE_TOWER);
+    var hostileCreeps = Game.rooms['E63S52'].find(FIND_HOSTILE_CREEPS);
+    _.each(towers, t => {
+        if (hostileCreeps.length > 0) {
+            var hostileCreep = hostileCreeps[0];
+            t.attack(hostileCreep);
+        }
+    });
+    
+    // link ai - transfers when main is full and target is empty
+    if (constants.mainLink && constants.upgradeLink) {
+        var mainLink = Game.getObjectById(constants.mainLink);
+        var upgradeLink = Game.getObjectById(constants.upgradeLink);
+        // console.log(Game.getObjectById(constants.mainStorage));
+        if (mainLink.cooldown == 0
+                && mainLink.energy == mainLink.energyCapacity
+                && upgradeLink.energy == 0
+                && Game.getObjectById(constants.mainStorage).store[RESOURCE_ENERGY] > constants.linkTransferMainStorageThreshold) {
+            mainLink.transferEnergy(upgradeLink);
+        }
+    }
+    
+    if (Game.time % 59 == 0) {
         console.log("************Creep Count************");
         var creepVersionCounts = _.groupBy(Game.creeps, c => c.memory.role + '-' + c.memory.version);
         _.each(creepVersionCounts, (creeps, modelId) => {

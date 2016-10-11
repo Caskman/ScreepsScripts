@@ -12,10 +12,10 @@ var MinerRole = {
         
         if (this.creep.memory.mining && this.atFullEnergy()) {
             this.creep.memory.mining = false;
-            this.creep.say('dumping');
+            this.say('dumping');
         } else if (!this.creep.memory.mining && this.atEmptyEnergy()) {
             this.creep.memory.mining = true;
-            this.creep.say('mining');
+            this.say('mining');
         }
         
         var job = utils.getJob(this.creep.memory.jobId);

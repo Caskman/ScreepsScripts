@@ -8,11 +8,11 @@ var BuilderRole = {
 
         if(this.creep.memory.building && this.creep.carry.energy == 0) {
             this.creep.memory.building = false;
-            this.creep.say('recharging');
+            this.say('recharging');
         }
         if(!this.creep.memory.building && this.creep.carry.energy == this.creep.carryCapacity) {
             this.creep.memory.building = true;
-            this.creep.say('building');
+            this.say('building');
         }
         
         if (this.creep.memory.building) {

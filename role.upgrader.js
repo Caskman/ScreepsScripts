@@ -12,10 +12,10 @@ var UpgraderRole = {
         
         if (this.creep.memory.upgrading && this.atEmptyEnergy()) {
             this.creep.memory.upgrading = false;
-            this.creep.say('recharging');
+            this.say('recharging');
         } else if (!this.creep.memory.upgrading && !this.atEmptyEnergy()) {
             this.creep.memory.upgrading = true;
-            this.creep.say('upgrading');
+            this.say('upgrading');
         }
         
         var job = utils.getJob(this.creep.memory.jobId);
